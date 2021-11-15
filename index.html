@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>商品篩選器</title>
+  <link
+    rel="stylesheet"
+    href="style/all.css"
+  >
+</head>
+
+<body>
+  <div class="addPanel">
+    <div class="addPanel__img">
+      <img
+        src="img/banner1.png"
+        alt="intro image 1"
+      >
+      <img
+        src="img/banner2.png"
+        alt="intro image 2"
+      >
+    </div>
+    <form class="addPanel__form">
+      <div class="form__title">
+        <img
+          src="img/plus-circle-solid.svg"
+          class="icon-plus"
+          alt="plus icon"
+        >
+        <legend class="form__titleText">新增旅遊套票</legend>
+      </div>
+      <fieldset class="form__fieldset">
+        <label class="form__label">
+          <div class="form__labelText">套票名稱</div>
+          <input
+            type="text"
+            class="form__input"
+            placeholder="請填寫套票名稱"
+            data-prop="name"
+            data-name="套票名稱"
+            required
+          >
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">圖片網址</div>
+          <input
+            type="text"
+            class="form__input form__input--img"
+            placeholder="請填寫圖片網址"
+            data-prop="imgUrl"
+            data-name="圖片網址"
+            required
+          >
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">景點地區</div>
+          <select
+            name="spotCity"
+            class="form__select form__spotCitySelect"
+            data-prop="area"
+            data-name="景點地區"
+            required
+          >
+            <!-- 載入資料 -->
+            <!-- <option
+              value="請選擇請點地區"
+              selected
+              disabled
+              hidden
+            >請選擇景點地區</option>
+            <option value="台北市">台北市</option>
+            <option value="台中市">台中市</option>
+            <option value="高雄市">高雄市</option> -->
+          </select>
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">套票金額</div>
+          <input
+            type="number"
+            class="form__input"
+            placeholder="請填寫套票金額"
+            data-prop="price"
+            data-name="套票金額"
+            required
+          >
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">套票組數</div>
+          <input
+            type="number"
+            class="form__input"
+            min="1"
+            placeholder="請填寫套票組數"
+            data-prop="group"
+            data-name="套票組數"
+            required
+          >
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">套票星級</div>
+          <input
+            type="number"
+            class="form__input form__input--rate"
+            name="score"
+            max="10"
+            min="1"
+            placeholder="請填寫套票星級"
+            data-prop="rate"
+            data-name="套票星級"
+            required
+          >
+        </label>
+        <label class="form__label">
+          <div class="form__labelText">套票描述</div>
+          <textarea
+            class="form__textarea form__description"
+            name="description"
+            rows="5"
+            maxlength="100"
+            placeholder="請填寫套票描述 (限 100 字)"
+            data-prop="description"
+            data-name="套票描述"
+            required
+          ></textarea>
+        </label>
+      </fieldset>
+      <button
+        type="button"
+        class="form__addBtn"
+      >新增套票</button>
+    </form>
+  </div>
+  <div class="content--background">
+    <div class="content">
+      <div class="citySearch">
+        <select
+          name="city"
+          class="citySearch__select"
+        >
+          <!-- 載入資料 -->
+          <!-- <option
+            value="地區搜尋"
+            selected
+            disabled
+            hidden
+          >地區搜尋</option>
+          <option value="全部">全部</option>
+          <option value="台北市">台北市</option>
+          <option value="台中市">台中市</option>
+          <option value="高雄市">高雄市</option> -->
+        </select>
+        <p class="citySearch__ticketCount"></p>
+      </div>
+      <ul class="spotList">
+        <!-- 載入資料 -->
+        <!-- <li class="spotList__item">
+          <div class="ticket__head">
+            <a
+              class="ticket__spotImg"
+              href="javascript:;"
+            >
+              <img
+                src="https://i.imgur.com/QXa1fMZ.png"
+                class="ticket__spotImg"
+                alt=""
+              >
+            </a>
+            <div class="ticket__city">台北</div>
+            <div class="ticket__score">8.6</div>
+          </div>
+          <div class="ticket__body">
+            <h3 class="ticket__title">綠島自由行套裝行程</h3>
+            <p class="ticket__introText">
+              嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。</p>
+            <div class="ticket__info">
+              <div class="ticket__count">
+                <img
+                  src="img/exclamation-circle-solid.svg"
+                  class="ticket__noteIcon"
+                  alt=""
+                >
+                <div class="ticket__countText">剩下最後 8 組</div>
+              </div>
+              <div class="ticket__price">
+                <span class="ticket__unit">TWD</span>
+                <div class="ticket__amount">$1,280</div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js'
+    integrity='sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=='
+    crossorigin='anonymous'
+  ></script>
+  <script src="all.js"></script>
+</body>
+
+</html>
